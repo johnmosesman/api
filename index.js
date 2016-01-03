@@ -2,13 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
+const slackme = require('./lib/slackme');
 
 const app = express();
 app.set('port', (process.env.PORT || 3399));
-// Slack Setup
-const hookUrl = 'https://hooks.slack.com/services/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';
-var Slack = require('node-slack');
-var slack = new Slack(hookUrl, {});
 
 // Main Middleware
 app.use(morgan('short'));
@@ -19,11 +16,7 @@ app.use(bodyParser.json());
 app.post('/contacts', function(req, res) {
   const contact = req.body.contact;
   if (contact.email && contact.message) {
-    slack.send({
-      "text": `MAIL CALL! ${JSON.stringify(req.body)}`,
-      channel: "#service",
-      username: "HyphyBot"
-    });
+    slackme(`MAIL CALL! ${JSON.stringify(req.body)}`);
 
     res.send(contact);
   } else {
