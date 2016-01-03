@@ -1,10 +1,12 @@
 const express = require('express');
+
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const slackme = require('./lib/slackme');
 
 const app = express();
+
 app.set('port', (process.env.PORT || 3399));
 
 // Main Middleware
@@ -31,6 +33,11 @@ app.post('/contacts', function(req, res) {
     }
     res.status(422).send({errors});
   }
+});
+
+app.get('/', function(req, res) {
+  console.log("Heartbeat");
+  res.end();
 });
 
 app.listen(app.get('port'), function() {
