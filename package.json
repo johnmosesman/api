@@ -23,7 +23,7 @@
     "morgan": "^1.6.1",
     "node-slack": "0.0.7"
   },
-  "engines", {
+  "engines": {
     "node": "4.2.2"
   }
 }
