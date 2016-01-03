@@ -14,23 +14,24 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.post('/contact', function(req, res) {
-  if (req.body.email && req.body.message) {
+app.post('/contacts', function(req, res) {
+  const contact = req.body.contact;
+  if (contact.email && contact.message) {
     slack.send({
       "text": `MAIL CALL! ${JSON.stringify(req.body)}`,
       channel: "#service",
       username: "HyphyBot"
     });
 
-    res.send(req.body);
+    res.send(contact);
   } else {
     const errors = {};
 
-    if (!req.body.email) {
+    if (!contact.email) {
       errors.email = "Please provide an email so we can contact you";
     }
 
-    if (!req.body.message) {
+    if (!contact.message) {
       errors.message = "Please provide a message to help use better understand your needs";
     }
     res.status(422).send({errors});
