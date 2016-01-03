@@ -3,12 +3,14 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 
+const app = express();
+app.set('port', (process.env.PORT || 3399));
+// Slack Setup
 const hookUrl = 'https://hooks.slack.com/services/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';
 var Slack = require('node-slack');
 var slack = new Slack(hookUrl, {});
 
-const app = express();
-
+// Main Middleware
 app.use(morgan('short'));
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -38,7 +40,7 @@ app.post('/contacts', function(req, res) {
   }
 });
 
-app.listen(3399, function() {
-  console.log('booting dat api on http://localhost:3399');
+app.listen(app.get('port'), function() {
+  console.log(`booting dat api on http://localhost:${app.get('port')}`);
 });
 
