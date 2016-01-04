@@ -3,8 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
-const slackme = require('./lib/slackme');
+const async = require('async');
 
+const slackme = require('./lib/slackme');
+const gareport = require('./lib/gareport');
 const app = express();
 
 app.set('port', (process.env.PORT || 3399));
@@ -38,6 +40,18 @@ app.post('/contacts', function(req, res) {
 app.get('/heartbeat', function(req, res) {
   console.log("Heartbeat");
   res.status(200).json({"status": "ok"});
+});
+
+app.get('/report', function(req, res) {
+  async.series([
+    function(callback) {
+      gareport(callback);
+    }
+  ], function (err, results) {
+    const total = results[0]["totalsForAllResults"];
+    slackme(`WEB VISITS YESTERDAY: ${JSON.stringify(total)} (this was harder than it looks so be happy`);
+   res.json(results[0]);
+  });
 });
 
 app.listen(app.get('port'), function() {
