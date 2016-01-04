@@ -35,7 +35,7 @@ app.post('/contacts', function(req, res) {
   }
 });
 
-app.get('/', function(req, res) {
+app.get('/heartbeat', function(req, res) {
   console.log("Heartbeat");
   res.status(200).json({"status": "ok"});
 });
