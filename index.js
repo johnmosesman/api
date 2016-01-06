@@ -21,8 +21,7 @@ app.post('/contacts', function(req, res) {
   const contact = req.body.contact;
   if (contact.email && contact.message) {
     slackme(`MAIL CALL! ${JSON.stringify(req.body)}`);
-
-    res.send(contact);
+    res.json({contact});
   } else {
     const errors = [];
 
