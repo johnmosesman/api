@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hyphybot",
+  "private_key_id": "fee1938360b6a606ccdccd9ef85a2b7a6e63cbdf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCnKrafdMBLSZPH\ncXl1Dj0XlWh9+PMAJ0L1qkS/ITldxDa4DrUyncw8yCnBZhn+D7YJlDmgfShklILN\nThsG0SsM5Dvbqc8JHswAbzLU/zO3RPSDFtl7arVl+7d/vikSiEcXKkQ6C5MS9BDk\nqV34lGM14bY7PDl5OXAnSkh3/Z6wZ3Smv4xcW06VNt5VSjNFHo1ubBd28V+IEQFU\nlhL1TtI7p8WBGIgT6MmDAPmUyXMz6EVylckHjbUjmKk4Pwu0qVy5kNh8wfICt/wx\nUlLpcVwWr5MPhjYoY8qJhb0yCWuNcRi7vSfSLd62/sejZ90EsKQU24HdYRtPs3Fg\nwi7XdZdjAgMBAAECggEAfK89O74nV4Bvu0kGIKsYIikMoTk4dprSNM5lLHIpiai6\nb5p4yGIuXf+mNVxkcr1hN8/ZE72GjU7AKUXinrkQ9TKe+v6zL8hKvOAz9+7Jsh66\nibRXTtiOqJyRh7RcijgfXkXmUa0ka/SjTQqOzsRPI3dRJumKrMKMxqF/YBBJdqTb\n397tRXLDEnEmLBLZt5jFKas8ShX16AzzSnMAhuo6q46pJwey7oDfxmDKGHMe8V7a\ntwgnawzP83NAYQ6KfqxWycK4N8SyGPtkljy6nddpfo4JBy2ngfe/B8xu2cHLJIaJ\nzM0Jf3aG6EKa6eESgceuurpPC/GXZgfR+aZjPRRIYQKBgQDvMRVO7XZL9OSfYzOh\nq8sm09lmjniRU5r3FGQ6vrArkSwko1A/GBQ4hAGV5p+QaBZIb9+AX8Z8o+l/kJGU\n4gldDIPHjd0+E3/+NbX3pnXo9x2z4t3H2n6D5lLcHgSdppAbFQcFL2+wWS0ZteEk\nNyjCbEm5oE8JNLeczLpiTydbuQKBgQCy6fIGMLWEeqemObHm+3dtlnm7MoNCP6Hw\n3Uu18+J2lHrplHKwqrK7truugGU8ZoEd1lwWjQv9M/MOsVnXKHpIsO3XuHRDU/ZX\nkhY1emwKVu2uK3XWPeUaZZegjl1T2tMhulNEicBWPNad+RxdY9hXda4rH8q2otvy\nZqzeJHJx+wKBgHo5uarAWy/LLzxnQ838bG4l2TS33tJcR5a0e9cs8/b/UvBR58Kl\n+kc65ViFJcpz9dcEG9CMoG+2jq3Z4RqUOraqm3hQfNqoukHbjmXDUQM/q5Tte+kR\nNI8QFg1W5YLtxzufjhvPNqKFny9BKpAIA7L+BNpvGZQZtS3Ry/hKfFE5AoGAW9El\nrLmYnflYSj03qGOLAcmEhWZB6GDBmdvnu+QCZ3qBrZfKWBHyEdWQcdhgm+O7BXX5\n4nTWH0ZmyTaI9ZtHTkDGfruhpt/S/1PwY9eE1LWR2p1hJuayyZ4zd2k4Sg115sw5\naWYMN/WW6pFqVh8kapXxIR56qMnheH/q3UH1HbsCfyS5/5bdzjvWatmIaA4y0I+7\nUa2ISzPl9VWvR+lWLwb+vh1dvdWipnU6/uDbFm6KMgkC32SqxQSu0IiG+Q/9III3\nngpWRv9Q5aSY8yXy274OjQIUJY2P4h4S51jjBAfgNtmf91AhqhK6zex4PIVP/PR0\nlRYGkCd5daYBFKoTbeQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hyphybot@hyphybot.iam.gserviceaccount.com",
+  "client_id": "104682850694040820400",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hyphybot%40hyphybot.iam.gserviceaccount.com"
+}
