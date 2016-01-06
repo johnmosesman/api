@@ -24,14 +24,20 @@ app.post('/contacts', function(req, res) {
 
     res.send(contact);
   } else {
-    const errors = {};
+    const errors = [];
 
     if (!contact.email) {
-      errors.email = "Please provide an email so we can contact you";
+      errors.push({
+        source: { pointer: 'data/attributes/email' },
+        detail: "Please provide an email so we can contact you"
+      });
     }
 
     if (!contact.message) {
-      errors.message = "Please provide a message to help use better understand your needs";
+      errors.push({
+        source: { pointer: 'data/attributes/message' },
+        detail: "Please provide a message to help use better understand your needs"
+      });
     }
     res.status(422).send({errors});
   }
